@@ -8,7 +8,7 @@ all:
 	$(GNAT) $(FLAGS) -Phuffman_coding.gpr
 test: all
 	@bin/tests
-prove: prove-l2
+prove: prove-l3
 prove-l4:
 	mkdir -p obj
 	$(SPARK) -Phuffman_coding.gpr --mode=all --level=4 --prover=$(PROVERS) --timeout=60 --steps=0 --checks-as-errors=on --warnings=error --pedantic --proof=progressive --counterexamples=on --report=all
